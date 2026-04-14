@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supernova Lifecycle Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="hud">
+        <h2>STELLAR ANALYSIS</h2>
+        <div class="data-point">Mass: <span id="mass-val">1.0</span> M<sub>⊙</sub></div>
+        <div class="data-point">Classification: <span id="class-val">Yellow Dwarf</span></div>
+        <div id="status">Status: Stable</div>
+    </div>
+
+    <div class="controls">
+        <input type="range" id="mass-slider" min="0.8" max="50" step="0.1" value="1">
+        <br>
+        <button id="trigger-btn">TRIGGER SUPERNOVA</button>
+        <button id="reset-btn">REBIRTH STAR</button>
+    </div>
+
+    <div id="canvas-container"></div>
+
+    <!-- Import Map -->
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+    </script>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
